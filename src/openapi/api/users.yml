@@ -1,0 +1,31 @@
+---
+openapi: 3.0.0
+info:
+  title: API for health check
+  version: 1.0.0
+  description: HealthCheck endpoints
+paths:
+  /users/{id}:
+    x-exegesis-controller: users
+    get:
+      tags:
+        - "Users - Resource"
+      operationId: getUser
+      summary: " - Get user"
+      description: |
+        Get user by userId
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        200:
+          description: "OK"
+
+components:
+  schemas:
+    user: 
+      $ref: '../components/schemas/user.yml'
+  parameters:
+    id:
+      $ref: '../components/parameters/id.yml'

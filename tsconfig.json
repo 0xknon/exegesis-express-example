@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"]
+    },
+    "target": "ES2016",
+    "module": "commonjs",
+    "allowJs": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "strict": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+    "coverage/",
+    "jest.config.js",
+    "commitlint.config.js",
+    "setupTests.ts",
+    "build/"
+  ]
+}

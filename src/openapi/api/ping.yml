@@ -1,0 +1,17 @@
+---
+openapi: 3.0.0
+info:
+  title: API for health check
+  version: 1.0.0
+  description: HealthCheck endpoints
+paths:
+  /ping:
+    x-exegesis-controller: ping
+    get:
+      operationId: ping
+      summary: " - Health Check"
+      description: |
+        Health Check
+      responses:
+        200:
+          description: "OK"

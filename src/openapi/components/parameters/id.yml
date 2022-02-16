@@ -1,0 +1,7 @@
+name: id
+in: path
+description: unique Id
+required: true
+schema:
+  type: string
+# example: 5c4ed33b3c679e0f160a44d3
