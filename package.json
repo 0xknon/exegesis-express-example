@@ -6,7 +6,7 @@
     "build": "bash ./scripts/build.bash",
     "build:doc": "rm -rf openapi && mkdir openapi && cd openapi && yarn build:doc:api",
     "build:doc:api": "speccy resolve ./src/openapi/api/index.yml -o ./openapi/api.yaml",
-    "build:type": "speccy resolve ./src/openapi/api/index.yml -o ./openapi/api.yaml",
+    "build:type": "openapi --input ./openapi/api.yaml --output ./generated --client axios",
     "dev": "nodemon -e yml,ts,json ./",
     "next-version": "npx next-standard-version",
     "release:production": "npx standard-version --message 'chore(release-production): %s\n\n[skip ci]' --no-verify",
