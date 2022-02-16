@@ -5,6 +5,6 @@ dist
 
 .env
 yarn-error.log
-/openapi
+# /openapi
 
 tmp/
