@@ -17,3 +17,10 @@ export const getUser = (context: ExegesisExpressContext): void => {
 
   res.status(200).send(user);
 };
+
+export const createUser = (context: ExegesisExpressContext): void => {
+  const { req } = context;
+  const { res, body } = req;
+
+  res.status(200).send(body);
+};

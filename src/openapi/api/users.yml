@@ -1,7 +1,28 @@
 ---
 paths:
-  /users/{id}:
+  /users:
+    post:
+      tags:
+        - "Users - Resource"
+      operationId: createUser
+      summary: " - Get user"
+      description: |
+        Get user by userId
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/user'
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: '#/components/schemas/user'
     x-exegesis-controller: users
+  /users/{id}:
     get:
       tags:
         - "Users - Resource"
@@ -16,6 +37,8 @@ paths:
       responses:
         200:
           description: "OK"
+          schema:
+            $ref: '#/components/schemas/user'
 
 components:
   schemas:

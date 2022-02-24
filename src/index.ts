@@ -21,17 +21,14 @@ const createApp = async (): Promise<Application> => {
       authenticators: {
         bearerAuth: BearerAuthenticator,
       },
-      // TODO: enable it once have time to update the api doc
-      // onResponseValidationError: ({ errors, context }) => {
-      //   const { res, isResponseFinished } = context;
-      //   console.log(errors);
-      //   console.log(res);
-      //   if (isResponseFinished()) {
-      //     return;
-      //   }
-      //   console.log(errors);
-      //   res.status(400).json(errors);
-      // },
+      onResponseValidationError: ({ errors, context }) => {
+        // eslint-disable-next-line @typescript-eslint/unbound-method
+        const { res, isResponseFinished } = context;
+        if (isResponseFinished()) {
+          return;
+        }
+        res.status(400).json(errors);
+      },
     },
   );
 
