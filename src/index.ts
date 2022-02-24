@@ -1,20 +1,12 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import path from 'path';
-import helmet from 'helmet';
 // import bodyParser from 'body-parser';
 import * as exegesisExpress from 'exegesis-express';
 
-import {
-  corsMiddleware,
-  errorHandler,
-  BearerAuthenticator,
-} from './middlewares';
+import { corsMiddleware, errorHandler, BearerAuthenticator } from './middlewares';
 
 const createApp = async (): Promise<Application> => {
   const app = express();
-
-  // secure apps by setting various HTTP headers
-  app.use(helmet());
 
   // enable CORS - Cross Origin Resource Sharing
   app.options('*', corsMiddleware);

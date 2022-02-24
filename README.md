@@ -4,14 +4,14 @@
 
 ### [exegesis-express](https://github.com/exegesis-js/exegesis-express)
 
-1. API Request and Response body get validated based on OpenAPI Specification 
-2. Apply Authentication Middleware by OpenAPI Specification 
+1. API Request and Response body get validated based on OpenAPI Specification
+2. Apply Authentication Middleware by OpenAPI Specification
 
 ### [speccy](https://github.com/wework/speccy)
 
 1. Combine separated OpenAPI yaml into 1 yaml for Swagger UI
 
-#### *Check out [openapi-ui](https://knyumatt.github.io/openapi-ui/) to better manage APIs in your organisation :+1:
+#### \*Check out [openapi-ui](https://knyumatt.github.io/openapi-ui/) to better manage APIs in your organisation :+1:
 
 ### [openapi-typescript-codegen](https://github.com/ferdikoomen/openapi-typescript-codegen)
 
@@ -23,7 +23,20 @@
 yarn && yarn dev
 ```
 
+### Folder structure
 
+```
+src/
+  ├── ...
+  └── openapi/
+      ├── api/
+      │   ├── index.yml
+      │   ├── ping.yml
+      │   └── user.yml
+      └── components/
+          ├── parameters/
+          └── schemas/
+```
 
 ### Exegesis Controllers
 

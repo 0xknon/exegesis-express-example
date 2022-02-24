@@ -6,9 +6,6 @@ info:
   version: 1.0.0
   contact:
     email: knyumatt@gmail.com
-tags:
-  - name: Indexes
-    description: Index management
 servers:
   - url: "/v1"
 paths:
