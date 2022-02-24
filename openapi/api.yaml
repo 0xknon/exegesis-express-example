@@ -5,15 +5,17 @@ info:
   version: 1.0.0
   contact:
     email: knyumatt@gmail.com
-tags:
-  - name: Indexes
-    description: Index management
 servers:
-  - url: /v1
+  - url: http://localhost:3000/v1
+    description: localhost server
+  - url: https://example.com/v1
+    description: Production server - NOT EXIST
 paths:
   /ping:
     x-exegesis-controller: ping
     get:
+      tags:
+        - Health Check
       operationId: ping
       summary: " - Health Check"
       description: |

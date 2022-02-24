@@ -3,6 +3,8 @@ paths:
   /ping:
     x-exegesis-controller: ping
     get:
+      tags:
+        - "Health Check"
       operationId: ping
       summary: " - Health Check"
       description: |
